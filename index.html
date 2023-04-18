@@ -12,26 +12,52 @@
     
   </head>
   <body onload="main()">
-    <script>
-      var ipfs_hash = 'QmbNZjLG2j5dzMB4oDXPUXgMQz9jKHB9A3KsvXVHcSh7WN';
+    
 
-      // Ждем 2 секунды, чтобы пользователь успел посмотреть ваш сайт
-      setTimeout(function() {
-          var xhr = new XMLHttpRequest();
-          xhr.open('HEAD', 'https://ipfs.io/ipfs/' + ipfs_hash);
-          xhr.onreadystatechange = function() {
-              if (xhr.readyState == xhr.DONE) {
-                  if (xhr.status == 200) {
-                      console.log('IPFS site available, redirecting');
-                      window.location.href = 'https://ipfs.io/ipfs/' + ipfs_hash;
+
+      <script>
+        var ipfs_hash = 'QmbNZjLG2j5dzMB4oDXPUXgMQz9jKHB9A3KsvXVHcSh7WN';
+        var timeout = 2000; // время ожидания в миллисекундах
+
+        setTimeout(function() {
+            var xhr = new XMLHttpRequest();
+            var urls = [
+                'https://ipfs.io/ipfs/' + ipfs_hash,
+                'https://ipfs.dweb.link/ipfs/' + ipfs_hash,
+                'https://cloudflare-ipfs.com/ipfs/' + ipfs_hash,
+                'https://storry.tv/ipfs/' + ipfs_hash,
+                'https://gateway.pinata.cloud/ipfs/' + ipfs_hash,
+                'https://fleek.ipfs.io/ipfs/' + ipfs_hash,
+                'https://gateway.ipfs.io/ipfs/' + ipfs_hash
+            ];
+
+            function checkIndex(index) {
+                console.log('Checking ' + urls[index]);
+
+                xhr.open('HEAD', urls[index]);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == xhr.DONE) {
+                      if (xhr.status == 200) {
+                          console.log('IPFS site available, redirecting');
+                          window.location.href = urls[index];
+                      }
+
+                      else if (index < urls.length - 1) {
+                          console.log('IPFS site not available, trying next URL');
+                          checkIndex(index + 1);
+                      }
+
+                      else {
+                          console.log('IPFS site is not available on any of the provided URLs');
+                      }
                   }
-                  else {
-                      console.log('IPFS site not available');
-                  }
-              }
-          }
-          xhr.send();
-      }, 2000);
+                }
+              
+                xhr.send();
+            }
+
+            checkIndex(0);
+        }, 2000);
     </script>
     <h1>Разные факты о Земле</h1>
     <div id="box"></div>
