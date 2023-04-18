@@ -12,6 +12,22 @@
     
   </head>
   <body onload="main()">
+    <script>
+      var ipfs_hash = 'QmU3eB8iBs3Wk1D6ajjydPAozPu2oei21CkZMUspXfcp6n';
+      var xhr = new XMLHttpRequest();
+      xhr.open('HEAD', 'https://ipfs.io/ipfs/' + ipfs_hash);
+      xhr.onreadystatechange = function() {
+          if (xhr.readyState == xhr.DONE) {
+              if (xhr.status == 200) {
+                  window.location.href = 'https://ipfs.io/ipfs/' + ipfs_hash;
+              }
+              else {
+                  console.log('Could not redirect to IPFS site');
+              }
+          }
+      }
+      xhr.send();
+    </script>
     <h1>Разные факты о Земле</h1>
     <div id="box"></div>
     <p id="output_p"></p>
