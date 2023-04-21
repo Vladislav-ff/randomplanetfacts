@@ -13,8 +13,8 @@ body {
   
 }
 
-#box {
-  background: url(earth.jpg);
+#earth {
+  background: url(planets/earth.jpg);
   background-size:cover;
   border:2px solid #000;
   border-radius:50%;
@@ -28,6 +28,182 @@ body {
              25px 25px 45px RGBA(0,0,0, 0.45) inset;
   margin:0em auto;
   transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#mars {
+  background: url(planets/mars.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#jupiter {
+  background: url(planets/jupiter.png);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#mercury {
+  background: url(planets/mercury.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#venus {
+  background: url(planets/venus.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#saturn {
+  background: url(planets/saturn.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#uranus {
+  background: url(planets/uranus.png);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+
+#neptune {
+  background: url(planets/neptune.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#pluto {
+  background: url(planets/pluto.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#sun {
+  background: url(planets/sun.jpg);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#moon {
+  background: url(planets/moon.png);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:50%;
+  width:650px;
+  height:650px;
+  animation: movimiento 38s linear 0s infinite;
+  box-shadow:0 0 25px RGBA(255,255,255, 0.10),
+             -8px -8px 15px #000 inset,
+             2px 2px 25px #000 inset,
+             -45px -45px 25px RGBA(0,0,0, 0.5) inset, 
+             25px 25px 45px RGBA(0,0,0, 0.45) inset;
+  margin:0em auto;
+  transform:rotateX(6deg) rotateY(6deg) rotateZ(6deg);
+}
+
+#solarsyst {
+  background: url(planets/solarsyst.gif);
+  background-size:cover;
+  border:2px solid #000;
+  border-radius:100%;
+  width:826px;
+  height:465px;
 }
 
 @keyframes movimiento {
