@@ -12,52 +12,10 @@
     
   </head>
   <body onload="main()">
+
+    <a href="https://ipfs.io/ipfs/QmbNZjLG2j5dzMB4oDXPUXgMQz9jKHB9A3KsvXVHcSh7WN" class="ipfs-button">IPFS</a>
     
-
-
-      <script>
-        var ipfs_hash = 'QmcYBaQifMFchrHStNw6mijWQtcWKLHWbYYExuQcidYWbi';
-        var timeout = 2000; // время ожидания в миллисекундах
-
-        setTimeout(function() {
-            var xhr = new XMLHttpRequest();
-            var urls = [
-                'ipfs://' + ipfs_hash,
-                'http://127.0.0.1:8080/ipns/' + ipfs_hash,
-                'https://127.0.0.1:8443/ipns/' + ipfs_hash,
-                'http://127.0.0.1:8080/ipfs/' + ipfs_hash,
-                'https://127.0.0.1:8443/ipfs/' + ipfs_hash
-                
-            ];
-
-            function checkIndex(index) {
-                console.log('Checking ' + urls[index]);
-
-                xhr.open('HEAD', urls[index]);
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState == xhr.DONE) {
-                      if (xhr.status == 200) {
-                          console.log('IPFS site available, redirecting');
-                          window.location.href = urls[index];
-                      }
-
-                      else if (index < urls.length - 1) {
-                          console.log('IPFS site not available, trying next URL');
-                          checkIndex(index + 1);
-                      }
-
-                      else {
-                          console.log('IPFS site is not available on any of the provided URLs');
-                      }
-                  }
-                }
-              
-                xhr.send();
-            }
-
-            checkIndex(0);
-        }, 2000);
-    </script>
+     
     <h1>Разные факты о планетах</h1>
     
     <div id="sun"></div>
